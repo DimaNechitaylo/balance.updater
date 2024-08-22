@@ -1,0 +1,14 @@
+spring.application.name: BalanceUpdater
+
+spring:
+  flyway:
+    locations: classpath:db/migration
+    url: jdbc:postgresql://localhost:5432/balance_updater
+    user: postgres
+    password: root
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/balance_updater
+    username: postgres
+    password: root
+  datasource:
+    initialization-mode: always
